@@ -1,3 +1,5 @@
+// Common styles - start
+
 * {
     font-family: 'Lato', sans-serif;
     font-size: 14px;
@@ -6,6 +8,10 @@
 
 body {
     background: #E5E5E5;
+    &.is-active-menu {
+        background: rgba(196, 196, 196, 0.05);
+        backdrop-filter: blur(10px);
+    }
 }
 
 body, html {
@@ -40,3 +46,4 @@ body, html {
 
 }
 
+// Common styles - end

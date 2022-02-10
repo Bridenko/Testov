@@ -146,11 +146,11 @@
 .aside-form__option:last-child {
   margin-bottom: 45px;
 }
-.aside-form__buttoms {
+.aside-form__buttons {
   display: flex;
   justify-content: space-between;
 }
-.aside-form__buttom {
+.aside-form__button {
   position: relative;
   padding: 35px 0px;
   max-width: 176px;
@@ -163,7 +163,14 @@
   color: #8D8D8D;
   transition: 0.3s ease;
 }
-.aside-form__buttom::after {
+.aside-form__button.is-green {
+  position: relative;
+  text-align: center;
+  padding-right: 25px;
+  color: #111111;
+  background: #00D093;
+}
+.aside-form__button.is-green::after {
   content: " ";
   position: absolute;
   top: 36px;
@@ -175,23 +182,13 @@
   background-size: cover;
   transition: 0.3s ease;
 }
-
-.is-green {
-  position: relative;
-  text-align: center;
-  padding-right: 25px;
-  color: #111111;
-  background: #00D093;
-}
-
-.is-green:hover:after {
+.aside-form__button.is-green:hover:after {
   content: " ";
   right: 20px;
   transform: scale(1.3);
   transition: 0.3s ease;
 }
-
-.is-white:hover {
+.aside-form__button.is-white:hover {
   color: #BCBCBC;
   font-weight: 700;
   transition: 0.3s ease;
@@ -207,16 +204,16 @@
   margin-top: 20px;
 }
 
-.products-optins {
+.products-options {
   display: flex;
   flex-wrap: wrap;
 }
-.products-optins__item {
+.products-options__item {
   position: relative;
   padding: 16px 10px;
   color: #3D3D3D;
 }
-.products-optins__item::before {
+.products-options__item::before {
   content: " ";
   border: 1px solid #BCBCBC;
   position: absolute;
@@ -225,7 +222,7 @@
   width: 100%;
   height: 100%;
 }
-.products-optins__item:hover:before {
+.products-options__item:hover:before {
   content: " ";
   border: 2px solid #111111;
   position: absolute;
@@ -234,7 +231,7 @@
   width: 100%;
   height: 100%;
 }
-.products-optins__item:focus:before {
+.products-options__item:focus:before {
   content: " ";
   border: 2px solid #111111;
   position: absolute;
@@ -243,10 +240,10 @@
   width: 100%;
   height: 100%;
 }
-.products-optins__item:focus {
+.products-options__item:focus {
   font-weight: 700;
 }
-.products-optins__item:active {
+.products-options__item:active {
   color: #ffffff;
   background-color: black;
   transition: 0.3s ease;
@@ -295,6 +292,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.products-card__picture img {
+  width: 100%;
+}
 .products-card__price-and-number {
   margin-bottom: 15px;
   display: flex;
@@ -324,11 +324,13 @@
   font-weight: 600;
   color: #00D093;
 }
-.products-card__buttoms {
+.products-card__buttons {
   display: flex;
 }
-.products-card__buttom {
+.products-card__button {
   position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
   max-width: 500px;
   width: 100%;
   height: 62px;
@@ -338,20 +340,17 @@
   background-color: white;
   transition: ease 0.2s;
 }
-
-.is-buttom:hover {
+.products-card__button.is-button:hover {
   background-color: #ddfff5;
   color: black;
   transition: ease 0.2s;
 }
-
-.is-black {
+.products-card__button.is-black {
   color: white;
   background-color: black;
   transition: ease 0.4s;
 }
-
-.is-black:hover {
+.products-card__button.is-black:hover {
   transform: scale(1.1);
   transition: ease 0.3s;
   border-radius: 5px;
@@ -413,7 +412,7 @@
     width: 100%;
   }
 
-  .aside-form__buttoms {
+  .aside-form__buttons {
     padding: 0px 25px;
   }
 
@@ -434,6 +433,11 @@
   .products-card {
     max-width: 700px;
     width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .products-card:last-child {
+    margin-bottom: 0px;
   }
 
   .products-head__page {
@@ -443,23 +447,30 @@
   .products-head__view {
     margin-bottom: 15px;
   }
+
+  .show-more__button::after {
+    background-image: url(../img/show-more-green.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 @media (max-width: 480px) {
-  .aside-form__buttom::after {
+  .aside-form__button::after {
     display: none;
   }
 
-  .is-green {
+  .aside-form__button.is-green {
     padding-right: 0px;
   }
 
-  .aside-form__buttoms {
+  .aside-form__buttons {
     padding: 0px;
   }
 }
 @media (max-width: 410px) {
   .aside-form__title {
     font-size: 20px;
+    line-height: 28px;
   }
 
   .products-head__title {

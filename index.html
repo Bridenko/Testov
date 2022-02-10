@@ -14,14 +14,14 @@
 </head>
 <body>
     <header>
-        <!-- Header desktop - start -->
+        <!-- HEADER DESKTOP - START -->
         <div class="header">
             <div class="header-container container">
                 <div class="header-head">
                     <span class="header-head__cooperation"><a class="header-head__cooperation-link" href="#!">Сотрудничетво</a></span>
                     <ul class="header-head__language">
-                        <li class="header-head__language-button"><a class="header-head__language-link" href="#!">Рус</a></li>
-                        <li class="header-head__language-button"><a class="header-head__language-link" href="#!">Укр</a></li>
+                        <li class="header-head__button"><a class="header-head__link" href="#!">Рус</a></li>
+                        <li class="header-head__button"><a class="header-head__link" href="#!">Укр</a></li>
                     </ul>
                 </div>
                 <div class="header-cnt">
@@ -54,9 +54,9 @@
                 </div> 
             </div>
         </div>
-        <!-- Header desktop - end -->
+        <!-- HEADER DESKTOP - END -->
 
-        <!-- Header mobile - start -->
+        <!-- HEADER MOBILE - START -->
         <div class="header-mob">
             <div class="header-mob__container">
                 <div class="header-mob__head">
@@ -83,8 +83,8 @@
                     <li class="burger-menu__item is-mb"><a class="burger-menu__link" href="#!">Контакты</a></li>
                 </ul>
                 <ul class="header-head__language is-border-bottom is-null">
-                    <li class="header-head__language-button"><a class="header-head__language-link" href="#!">Рус</a></li>
-                    <li class="header-head__language-button"><a class="header-head__language-link" href="#!">Укр</a></li>
+                    <li class="header-head__button"><a class="header-head__link" href="#!">Рус</a></li>
+                    <li class="header-head__button"><a class="header-head__link" href="#!">Укр</a></li>
                 </ul>
             </nav>
             <nav class="burger-menu__nav">
@@ -107,7 +107,7 @@
                 </ul>
             </nav>
         </div>
-        <!-- Header mobile - end -->
+        <!-- HEADER MOBILE - END -->
     </header>
     <main class="main">
         <div class="container">
@@ -128,24 +128,26 @@
                     </div>
                 </div>
                 <div class="products-catalog">
+
+                    <!-- ASIDE FORM - START -->
                     <aside class="products-aside">
                         <form class="aside-form" action="#" method="post" enctype="multipart/form-data">
                             <div class="aside-form__head">
                                 <h3 class="aside-form__title">Подобрать защиту</h3>
-                                <img class="aside-form__drop-down" width="26" height="17" src="./img/drop-down.svg" alt="">
+                                <img class="aside-form__drop-down" width="35" height="25" src="./img/drop-down.svg" alt="">
                             </div>
                             <div class="aside-form__options">
-                                <select class="aside-form__option" name="car model" id="">
+                                <select class="aside-form__option" name="car-model" id="">
                                     <option value="BMW">BMW</option>
                                     <option value="BMW">Audi</option>
                                     <option value="BMW">Toyota</option>
                                 </select>
-                                <select class="aside-form__option" name="car series" id="">
+                                <select class="aside-form__option" name="car-series" id="">
                                     <option value="BMW">518</option>
                                     <option value="BMW">525</option>
                                     <option value="BMW">535</option>
                                 </select>
-                                <select class="aside-form__option" name="car year" id="">
+                                <select class="aside-form__option" name="car-year" id="">
                                     <option value="BMW">1995</option>
                                     <option value="BMW">1997</option>
                                     <option value="BMW">1999</option>
@@ -159,41 +161,45 @@
                                     <option value="BMW">2018</option>
                                     <option value="BMW">2019</option>
                                 </select>
-                                <select class="aside-form__option" name="car body type" id="">
+                                <select class="aside-form__option" name="car-body-type" id="">
                                     <option value="BMW">Hatchback</option>
                                     <option value="BMW">Station wagon</option>
                                     <option value="BMW">Sedan</option>
                                 </select>
                             </div>
-                            <div class="aside-form__buttoms">
-                                <button class="aside-form__buttom is-white" type="reset">Сбросить</button>
-                                <button class="aside-form__buttom is-green" type="submit">Применить</button>
+                            <div class="aside-form__buttons">
+                                <button class="aside-form__button is-white" type="reset">Сбросить</button>
+                                <button class="aside-form__button is-green" type="submit">Применить</button>
                             </div>
                             
                         </form>
                     </aside>
+                    <!-- ASIDE FORM - END -->
+
                     <div class="products-content">
                         <div class="products-cards">
-                            <div class="products-optins">
-                                <button class="products-optins__item" href="#!">1995</button>
-                                <button class="products-optins__item" href="#!">1997</button>
-                                <button class="products-optins__item" href="#!">1999</button>
-                                <button class="products-optins__item" href="#!">2000</button>
-                                <button class="products-optins__item" href="#!">2003</button>
-                                <button class="products-optins__item" href="#!">2005</button>
-                                <button class="products-optins__item" href="#!">2010</button>
-                                <button class="products-optins__item" href="#!">2012</button>
-                                <button class="products-optins__item" href="#!">2014</button>
-                                <button class="products-optins__item" href="#!">2015</button>
-                                <button class="products-optins__item" href="#!">2018</button>
-                                <button class="products-optins__item" href="#!">2019</button>
-                                <button class="products-optins__item" href="#!">1995</button>
-                                <button class="products-optins__item" href="#!">1997</button>
-                                <button class="products-optins__item" href="#!">1999</button>
-                                <button class="products-optins__item" href="#!">2000</button>
-                                <button class="products-optins__item" href="#!">2003</button>
+                            <div class="products-options">
+                                <button class="products-options__item" href="#!">1995</button>
+                                <button class="products-options__item" href="#!">1997</button>
+                                <button class="products-options__item" href="#!">1999</button>
+                                <button class="products-options__item" href="#!">2000</button>
+                                <button class="products-options__item" href="#!">2003</button>
+                                <button class="products-options__item" href="#!">2005</button>
+                                <button class="products-options__item" href="#!">2010</button>
+                                <button class="products-options__item" href="#!">2012</button>
+                                <button class="products-options__item" href="#!">2014</button>
+                                <button class="products-options__item" href="#!">2015</button>
+                                <button class="products-options__item" href="#!">2018</button>
+                                <button class="products-options__item" href="#!">2019</button>
+                                <button class="products-options__item" href="#!">1995</button>
+                                <button class="products-options__item" href="#!">1997</button>
+                                <button class="products-options__item" href="#!">1999</button>
+                                <button class="products-options__item" href="#!">2000</button>
+                                <button class="products-options__item" href="#!">2003</button>
                             </div>
                             <div class="products-cards__list">
+
+                                <!-- PRODUCT CARD - START -->
                                 <article class="products-card">
                                     <div class="products-card__head">
                                         <span class="products-card__comment">0 отзыв(ов)</span>
@@ -210,9 +216,9 @@
                                     <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
                                         Материал: серия <span>Premium</span>
                                     </p>
-                                    <div class="products-card__buttoms">
-                                        <button class="products-card__buttom is-buttom">Купить в 1 клик</button>
-                                        <button class="products-card__buttom is-black">Заказать</button>
+                                    <div class="products-card__buttons">
+                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                        <button class="products-card__button is-black">Заказать</button>
                                     </div>
                                 </article>
                                 <article class="products-card">
@@ -231,9 +237,9 @@
                                     <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
                                         Материал: серия <span>Premium</span>
                                     </p>
-                                    <div class="products-card__buttoms">
-                                        <button class="products-card__buttom is-buttom">Купить в 1 клик</button>
-                                        <button class="products-card__buttom is-black">Заказать</button>
+                                    <div class="products-card__buttons">
+                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                        <button class="products-card__button is-black">Заказать</button>
                                     </div>
                                 </article>
                                 <article class="products-card">
@@ -252,9 +258,9 @@
                                     <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
                                         Материал: серия <span>Premium</span>
                                     </p>
-                                    <div class="products-card__buttoms">
-                                        <button class="products-card__buttom is-buttom">Купить в 1 клик</button>
-                                        <button class="products-card__buttom is-black">Заказать</button>
+                                    <div class="products-card__buttons">
+                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                        <button class="products-card__button is-black">Заказать</button>
                                     </div>
                                 </article>
                                 <article class="products-card">
@@ -273,11 +279,54 @@
                                     <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
                                         Материал: серия <span>Premium</span>
                                     </p>
-                                    <div class="products-card__buttoms">
-                                        <button class="products-card__buttom is-buttom">Купить в 1 клик</button>
-                                        <button class="products-card__buttom is-black">Заказать</button>
+                                    <div class="products-card__buttons">
+                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                        <button class="products-card__button is-black">Заказать</button>
                                     </div>
                                 </article>
+                                <article class="products-card">
+                                    <div class="products-card__head">
+                                        <span class="products-card__comment">0 отзыв(ов)</span>
+                                        <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                    </div>
+                                    <div class="products-card__picture">
+                                        <img src="./img/product-img.svg" alt="">
+                                    </div>
+                                    <div class="products-card__price-and-number">
+                                        <span class="products-card__price">2 750 грн</span>
+                                        <span class="products-card__number">102.9355.00</span>
+                                    </div>
+                                    <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                    <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                        Материал: серия <span>Premium</span>
+                                    </p>
+                                    <div class="products-card__buttons">
+                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                        <button class="products-card__button is-black">Заказать</button>
+                                    </div>
+                                </article>
+                                <article class="products-card">
+                                    <div class="products-card__head">
+                                        <span class="products-card__comment">0 отзыв(ов)</span>
+                                        <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                    </div>
+                                    <div class="products-card__picture">
+                                        <img src="./img/product-img.svg" alt="">
+                                    </div>
+                                    <div class="products-card__price-and-number">
+                                        <span class="products-card__price">2 750 грн</span>
+                                        <span class="products-card__number">102.9355.00</span>
+                                    </div>
+                                    <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                    <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                        Материал: серия <span>Premium</span>
+                                    </p>
+                                    <div class="products-card__buttons">
+                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                        <button class="products-card__button is-black">Заказать</button>
+                                    </div>
+                                </article>
+                                <!-- PRODUCT CARD - END -->
                             </div>
                         </div>
                         <div class="show-more">

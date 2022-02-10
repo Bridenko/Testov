@@ -104,18 +104,16 @@
     top: 0px;
     align-self: baseline;
     width: 352px;
-    
-
     background-color: #282828;
 }
+
+// ASIDE FORM - START
+
 .aside-form {
-    
     display: flex;
     flex-direction: column;
     width: 352px;
     
-    
-
     &__head {
         padding: 30px 25px;
         display: flex;
@@ -161,12 +159,12 @@
     &__option:last-child {
         margin-bottom: 45px;
 	}
-    &__buttoms {
+    &__buttons {
         display: flex;
         justify-content: space-between;
         
     }
-    &__buttom {
+    &__button {
         position: relative;
         padding: 35px 0px;
         
@@ -179,46 +177,45 @@
         border: 2px solid #00D093;
         color: #8D8D8D;
         transition: 0.3s ease;
+        &.is-green {
+            position: relative;
+            text-align: center;
+            padding-right: 25px;
+            color: #111111;
+            background: #00D093;
+        }
+        &.is-green::after {
+            content: " ";
+            position: absolute;
+            top: 36px;
+            right: 20px;
+            width: 16px;
+            height: 22px;
+            background-image: url(../img/aside-buttom.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: 0.3s ease;
+        }
+        &.is-green:hover:after {
+            content: " ";
+            right: 20px;
+            transform: scale(1.3);
+            transition: 0.3s ease;
+        }
+        &.is-white:hover {
+                
+            color: #BCBCBC;
+            font-weight: 700;
+            transition: 0.3s ease;
+        }
     }
-    &__buttom::after {
-        content: " ";
-        position: absolute;
-        top: 36px;
-        right: 20px;
-        width: 16px;
-        height: 22px;
-        background-image: url(../img/aside-buttom.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        transition: 0.3s ease;
-    }
-    
-    
     
 }
-.is-green {
-    position: relative;
-    text-align: center;
-    padding-right: 25px;
-    color: #111111;
-    background: #00D093;
-}
 
 
+// ASIDE FORM - END
 
-.is-green:hover:after {
-    content: " ";
-    right: 20px;
-    transform: scale(1.3);
-    transition: 0.3s ease;
-}
 
-.is-white:hover {
-        
-    color: #BCBCBC;
-    font-weight: 700;
-    transition: 0.3s ease;
-}
 .products-cards {
     
     
@@ -231,7 +228,10 @@
         margin-top: 20px;
 	}
 }
-.products-optins {
+
+// PRODUCT OPTIONS - START
+
+.products-options {
     display: flex;
     flex-wrap: wrap;
 
@@ -287,6 +287,11 @@
         
     }
 }
+
+// PRODUCT OPTIONS - END
+
+// PRODUCT CARD - START
+
 .products-card {
     display: flex;
     flex-direction: column;
@@ -332,6 +337,9 @@
         object-fit: cover;
 
 	}
+    &__picture img {
+        width: 100%;
+    }
 	&__price-and-number {
         margin-bottom: 15px;
         display: flex;
@@ -363,11 +371,13 @@
         color: #00D093;
     }
 
-	&__buttoms {
+	&__buttons {
         display: flex;
 	}
-	&__buttom {
+	&__button {
         position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
         max-width: 500px;
         width: 100%;
         height: 62px;
@@ -376,24 +386,29 @@
         border: 2px solid #111111;
         background-color: white;
         transition: ease 0.2s;
+
+        &.is-button:hover {
+            background-color: #ddfff5;
+            color: black;
+            transition: ease 0.2s;
+        }
+        &.is-black {
+            color: white;
+            background-color: black;
+            transition: ease 0.4s;
+        }
+        &.is-black:hover {
+            transform: scale(1.1);
+            transition: ease 0.3s;
+            border-radius: 5px;
+        }
 	}
     
 }
-.is-buttom:hover {
-    background-color: #ddfff5;
-    color: black;
-    transition: ease 0.2s;
-}
-.is-black {
-    color: white;
-    background-color: black;
-    transition: ease 0.4s;
-}
-.is-black:hover {
-    transform: scale(1.1);
-    transition: ease 0.3s;
-    border-radius: 5px;
-}
+
+// PRODUCT CARD - END
+
+// SHOW MORE BUTTON - START
 
 .show-more {
     padding: 42px 0px;
@@ -425,6 +440,11 @@
         background-repeat: no-repeat;
     }
 }
+
+// SHOW MORE BUTTON - END
+
+// Media - start
+
 @media (max-width: 1160px) {
     .show-more {
         text-align: start;
@@ -443,6 +463,7 @@
     .show-more__button {
         font-size: 16px;
     }
+
     .products-aside {
         width: 100%;
         margin-bottom: 20px;
@@ -450,7 +471,7 @@
     .aside-form {
         width: 100%;
     }
-    .aside-form__buttoms {
+    .aside-form__buttons {
         padding: 0px 25px;
     }
     
@@ -470,6 +491,10 @@
     .products-card {
         max-width: 700px;
         width: 100%;
+        margin-bottom: 10px;
+    }
+    .products-card:last-child {
+        margin-bottom: 0px;
     }
     .products-head__page {
         padding: 20px 0px 15px 0px;
@@ -477,24 +502,38 @@
     .products-head__view {
         margin-bottom: 15px;
      }
+    .show-more__button::after {
+        background-image: url(../img/show-more-green.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 @media (max-width: 480px) {
-    .aside-form__buttom::after {
+    .aside-form__button::after {
         display: none;
     }
-    .is-green {
-        padding-right: 0px;
+    .aside-form__button {
+        
+        &.is-green {
+            padding-right: 0px;
+        }
     }
     
-    .aside-form__buttoms {
+    
+    .aside-form__buttons {
         padding: 0px;
     }
+
+}
+
+@media (max-width: 438px) {
 
 }
 
 @media (max-width: 410px) {
     .aside-form__title {
         font-size: 20px;
+        line-height: 28px;
     }
     .products-head__title {
         font-size: 20px;
@@ -503,5 +542,5 @@
     }
 }
 
-
+// Media - end
 

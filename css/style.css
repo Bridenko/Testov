@@ -8,6 +8,11 @@ body {
   background: #E5E5E5;
 }
 
+body, html {
+  overflow-x: hidden;
+  position: relative;
+}
+
 .container {
   max-width: 1120px;
   margin: 0 auto;

@@ -266,15 +266,17 @@ input[class=header-form__input] {
     }
 
 }
+
 @media (max-width: 1160px) {
     .header {
         display: none;
     }
-    header {
-        
-    }
     .header-form {
         max-width: 316px;
+    }
+    body {
+        overflow-x: hidden;
+        position: relative;
     }
 }
 @media (max-width: 800px) {

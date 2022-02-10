@@ -264,6 +264,11 @@ input[class=header-form__input] {
   .header-form {
     max-width: 316px;
   }
+
+  body {
+    overflow-x: hidden;
+    position: relative;
+  }
 }
 @media (max-width: 800px) {
   .header-form {

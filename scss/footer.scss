@@ -30,7 +30,7 @@
         
 	}
     &__column {
-
+        margin-right: 10px;
         
     }
     &__adress {
@@ -41,6 +41,7 @@
         
         margin-bottom: 38px;
         font-weight: 500;
+        line-height: 24px;
         color: white;
         &.is-end {
             align-items: flex-end;
@@ -69,12 +70,7 @@
             width: 100%;
             transition: 0.3s ease;
         }
-        &.is-fz-18 {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 32px;
-            
-        }
+        
         &.is-grey {
             color: #8D8D8D;
         }
@@ -129,8 +125,8 @@
 
 @media (max-width: 1160px) {
     .footer-cnt__column {
-        max-width: 170px;
-        width: 100%;
+        // max-width: 145px;
+        // width: 100%;
         &.is-width {
             max-width: 100vw;
             width: 100%;
@@ -190,6 +186,48 @@
         &.is-fw-700 {
             font-weight: 700;
             line-height: 24px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    footer-cnt__item {
+        &.is-fz-18 {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 32px;
+            
+        }
+    }
+}
+
+@media (width: 375px) {
+    .footer-cnt__column {
+        
+        &.is-row {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+
+        }
+        
+    }
+    .footer-cnt__item {
+        &.is-100 {
+            width: 100%;
+        }
+        &.is-w-145 {
+            width: 145px;
+        }
+        &.is-order-1 {
+            order: 1;
+        }
+        &.is-order-2 {
+            order: 2;
+        }
+        &.is-order-3 {
+            order: 3;
         }
     }
 }

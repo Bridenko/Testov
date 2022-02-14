@@ -297,7 +297,12 @@
      object-fit: cover;
 }
 .products-card__picture img {
+  max-width: 302px;
+  max-height: 246px;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 .products-card__price-and-number {
   margin-bottom: 15px;
@@ -343,9 +348,7 @@
   font-weight: 500;
   border: 2px solid #111111;
   background-color: white;
-  pointer-events: none !important;
   color: black !important;
-  cursor: default !important;
   text-decoration: none !important;
   transition: ease 0.2s;
 }
@@ -357,9 +360,7 @@
 .products-card__button.is-black {
   color: white;
   background-color: black;
-  pointer-events: none !important;
   color: white !important;
-  cursor: default !important;
   text-decoration: none !important;
   transition: ease 0.4s;
 }
@@ -383,9 +384,7 @@
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   background: #E5E5E5;
-  pointer-events: none !important;
   color: black !important;
-  cursor: default !important;
   text-decoration: none !important;
 }
 .show-more__button::after {

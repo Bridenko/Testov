@@ -344,7 +344,7 @@
   border: 2px solid #111111;
   background-color: white;
   pointer-events: none !important;
-  color: black !important;
+  color: white !important;
   cursor: default !important;
   text-decoration: none !important;
   transition: ease 0.2s;
@@ -383,6 +383,10 @@
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   background: #E5E5E5;
+  pointer-events: none !important;
+  color: black !important;
+  cursor: default !important;
+  text-decoration: none !important;
 }
 .show-more__button::after {
   content: " ";

@@ -262,7 +262,6 @@
 .products-card__head {
   display: flex;
   justify-content: flex-end;
-  padding-bottom: 10px;
 }
 .products-card__comment {
   padding-left: 45px;
@@ -289,6 +288,7 @@
 }
 .products-card__picture {
   margin: 0 auto;
+  margin-bottom: 20px;
   max-width: 323px;
   max-height: 246px;
   width: 100%;
@@ -299,6 +299,7 @@
 .products-card__picture img {
   max-width: 302px;
   max-height: 246px;
+  margin: 0 auto;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;

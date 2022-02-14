@@ -405,6 +405,10 @@
         &.is-black {
             color: white;
             background-color: black;
+            pointer-events: none !important;
+            color: rgb(255, 255, 255) !important;
+            cursor: default !important;
+            text-decoration: none !important;
             transition: ease 0.4s;
         }
         &.is-black:hover {

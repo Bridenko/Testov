@@ -357,6 +357,10 @@
 .products-card__button.is-black {
   color: white;
   background-color: black;
+  pointer-events: none !important;
+  color: white !important;
+  cursor: default !important;
+  text-decoration: none !important;
   transition: ease 0.4s;
 }
 .products-card__button.is-black:hover {

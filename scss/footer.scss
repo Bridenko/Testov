@@ -29,10 +29,7 @@
         
         
 	}
-    &__column {
-        
-        
-    }
+
     &__adress {
         display: flex;
         justify-content: space-between;
@@ -155,12 +152,12 @@
 }
 
 @media (min-width: 768px) {
-    footer-cnt__item {
+    .footer-cnt__item {
         &.is-fz-18 {
             font-weight: 400;
             font-size: 18px;
             line-height: 32px;
-            
+            flex: 1 1 auto;
         }
     }
 }

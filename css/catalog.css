@@ -343,6 +343,10 @@
   font-weight: 500;
   border: 2px solid #111111;
   background-color: white;
+  pointer-events: none !important;
+  color: black !important;
+  cursor: default !important;
+  text-decoration: none !important;
   transition: ease 0.2s;
 }
 .products-card__button.is-button:hover {

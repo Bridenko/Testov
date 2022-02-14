@@ -245,7 +245,7 @@ input[class=header-form__input] {
 .header-mob__head {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding: 34px 40px;
 }
 .header-mob__title {
   position: relative;
@@ -259,7 +259,7 @@ input[class=header-form__input] {
 .header-mob__nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px 30px 10px 30px;
+  padding: 20px 40px 10px 40px;
   background: #00D093;
   z-index: 101;
 }

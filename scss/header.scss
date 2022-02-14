@@ -180,7 +180,7 @@ input[class=header-form__input] {
     font-weight: 700;
 
     &__number {
-        
+
     }
 
     &__link {
@@ -261,12 +261,13 @@ input[class=header-form__input] {
     position: relative;
     background: #000000;
     &__container {
+        
     }
 
     &__head {
         display: flex;
         justify-content: space-between;
-        padding: 30px;
+        padding: 34px 40px;
         
     }
 
@@ -286,7 +287,7 @@ input[class=header-form__input] {
         
         display: flex;
         justify-content: space-between;
-        padding: 20px 30px 10px 30px;
+        padding: 20px 40px 10px 40px;
         background: #00D093;
         z-index: 101;
     }
@@ -413,5 +414,7 @@ input[class=header-form__input] {
         max-width: 280px;
     }
 }
+
+
 
 // Media (footer) - end

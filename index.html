@@ -10,12 +10,13 @@
     <meta name="format-detection" content="email=no">
 
     <title>Document</title>
-    
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/null-style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/catalog.css">
+    <link rel="stylesheet" href="./css/viewed.css">
     <link rel="stylesheet" href="./css/benefits.css">
     <link rel="stylesheet" href="./css/footer.css">
 </head>
@@ -141,37 +142,40 @@
                         <form class="aside-form" action="#" method="post" enctype="multipart/form-data">
                             <div class="aside-form__head">
                                 <h3 class="aside-form__title">Подобрать защиту</h3>
-                                <img class="aside-form__drop-down" width="35" height="25" src="./img/drop-down.svg" alt="">
+                                <img class="aside-form__drop-down" width="17" height="26" src="./img/drop-down.svg" alt="">
                             </div>
                             <div class="aside-form__options">
                                 <select class="aside-form__option" name="model" id="model">
-                                    <option value="BMW">BMW</option>
-                                    <option value="BMW">Audi</option>
-                                    <option value="BMW">Toyota</option>
+                                    <option value="model" selected>BMW</option>
+                                    <option value="model">Audi</option>
+                                    <option value="model">Toyota</option>
                                 </select>
                                 <select class="aside-form__option" name="series" id="series">
-                                    <option value="BMW">518</option>
-                                    <option value="BMW">525</option>
-                                    <option value="BMW">535</option>
+                                    <option value="" disabled selected hidden>Модель автомобиля</option>
+                                    <option value="series">518</option>
+                                    <option value="series">525</option>
+                                    <option value="series">535</option>
                                 </select>
                                 <select class="aside-form__option" name="year" id="year">
-                                    <option value="BMW">1995</option>
-                                    <option value="BMW">1997</option>
-                                    <option value="BMW">1999</option>
-                                    <option value="BMW">2000</option>
-                                    <option value="BMW">2003</option>
-                                    <option value="BMW">2005</option>
-                                    <option value="BMW">2010</option>
-                                    <option value="BMW">2012</option>
-                                    <option value="BMW">2014</option>
-                                    <option value="BMW">2015</option>
-                                    <option value="BMW">2018</option>
-                                    <option value="BMW">2019</option>
+                                    <option value="" disabled selected hidden>Год автомобиля</option>
+                                    <option value="year">1995</option>
+                                    <option value="year">1997</option>
+                                    <option value="year">1999</option>
+                                    <option value="year">2000</option>
+                                    <option value="year">2003</option>
+                                    <option value="year">2005</option>
+                                    <option value="year">2010</option>
+                                    <option value="year">2012</option>
+                                    <option value="year">2014</option>
+                                    <option value="year">2015</option>
+                                    <option value="year">2018</option>
+                                    <option value="year">2019</option>
                                 </select>
                                 <select class="aside-form__option" name="body" id="body">
-                                    <option value="BMW">Hatchback</option>
-                                    <option value="BMW">Station wagon</option>
-                                    <option value="BMW">Sedan</option>
+                                    <option value="" disabled selected hidden>Тип кузова и двигателя</option>
+                                    <option value="body">Hatchback</option>
+                                    <option value="body">Station wagon</option>
+                                    <option value="body">Sedan</option>
                                 </select>
                             </div>
                             <div class="aside-form__buttons">
@@ -339,28 +343,104 @@
                         <div class="show-more">
                             <button class="show-more__button">Показать еще 6 защит</button>
                         </div>
-                        <div class="page-number-switch">
-
+                        <div class="pagination">
+                            <button class="pagination__button is-first is-pagination"></button>
+                            <button class="pagination__button is-previous is-pagination"></button>
+                            <button class="pagination__button is-button-border">1</button>
+                            <button class="pagination__button is-button-border">2</button>
+                            <button class="pagination__button is-button-border">3</button>
+                            <button class="pagination__button is-button-border is-none">4</button>
+                            <button class="pagination__button is-padding" disabled style="cursor: default;">......</button>
+                            <button class="pagination__button is-button-border">65</button>
+                            <button class="pagination__button is-next is-pagination"></button>
+                            <button class="pagination__button is-last is-pagination"></button>
                         </div>
                     </div>
                     
                 </div>
             </section>
+            <section class="viewed">
+                <h2 class="viewed__title">Недавно смотрели</h2>
+                <div class="viewed__cards">
+                    <article class="products-card">
+                        <div class="products-card__head is-flex">
+                            <span class="products-card__status">в наличии</span>
+                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                        </div>
+                        <div class="products-card__picture">
+                            <img src="./img/product-img.svg" alt="">
+                        </div>
+                        <div class="products-card__price-and-number ">
+                            <span class="products-card__price">2 750 грн</span>
+                            <span class="products-card__number is-color">102.9355.00</span>
+                        </div>
+                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium</p>
+                        <p class="products-card__details is-mb-0">Материал: Оцинкованная сталь + покрытие</p>
+                        <span class="products-card__comment is-margin">0 отзыв(ов)</span>
+                        <div class="products-card__buttons">
+                            <button class="products-card__button is-buttom is-mar">Купить в 1 клик</button>
+                            <button class="products-card__button is-black">Заказать</button>
+                        </div>
+                    </article>
+                    <article class="products-card">
+                        <div class="products-card__head is-flex">
+                            <span class="products-card__status">в наличии</span>
+                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                        </div>
+                        <div class="products-card__picture">
+                            <img src="./img/product-img.svg" alt="">
+                        </div>
+                        <div class="products-card__price-and-number ">
+                            <span class="products-card__price">2 750 грн</span>
+                            <span class="products-card__number is-color">102.9355.00</span>
+                        </div>
+                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium</p>
+                        <p class="products-card__details is-mb-0">Материал: Оцинкованная сталь + покрытие</p>
+                        <span class="products-card__comment is-margin">0 отзыв(ов)</span>
+                        <div class="products-card__buttons">
+                            <button class="products-card__button is-buttom is-mar">Купить в 1 клик</button>
+                            <button class="products-card__button is-black">Заказать</button>
+                        </div>
+                    </article>
+                    <article class="products-card">
+                        <div class="products-card__head is-flex">
+                            <span class="products-card__status">в наличии</span>
+                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                        </div>
+                        <div class="products-card__picture">
+                            <img src="./img/product-img.svg" alt="">
+                        </div>
+                        <div class="products-card__price-and-number ">
+                            <span class="products-card__price">2 750 грн</span>
+                            <span class="products-card__number is-color">102.9355.00</span>
+                        </div>
+                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium</p>
+                        <p class="products-card__details is-mb-0">Материал: Оцинкованная сталь + покрытие</p>
+                        <span class="products-card__comment is-margin">0 отзыв(ов)</span>
+                        <div class="products-card__buttons">
+                            <button class="products-card__button is-buttom is-mar">Купить в 1 клик</button>
+                            <button class="products-card__button is-black">Заказать</button>
+                        </div>
+                    </article>
+                    
+                    
+                </div>
+            </section>
             <section class="benefits">
                 <div class="benefits-card">
-                    <img class="benefits-card__pic" width="52" src="./img/material.svg" alt="">
+                    <img class="benefits-card__pic" width="33" src="./img/material.svg" alt="">
                     <h4 class="benefits-card__title">Сырье</h4>
                     <p class="benefits-card__text">Качественное сырьё – высокопрочная сталь с полимерным покрытием</p>
                 </div>
                 <div class="benefits-card">
-                    <img class="benefits-card__pic" width="52" src="./img/garanty.svg" alt="">
+                    <img class="benefits-card__pic" width="33" src="./img/garanty.svg" alt="">
                     <h4 class="benefits-card__title">Гарантия</h4>
-                    <p class="benefits-card__text">Гарантия на 10 тыс. км пробега автомобиля</p>
+                    <p class="benefits-card__text">Гарантия на 10 тыс. км <br>пробега автомобиля</p>
                 </div>
                 <div class="benefits-card">
-                    <img class="benefits-card__pic" width="52" src="./img/price.svg" alt="">
+                    <img class="benefits-card__pic" width="33" src="./img/price.svg" alt="">
                     <h4 class="benefits-card__title">Цена</h4>
-                    <p class="benefits-card__text">Вы будете удивлены, цена от производителя</p>
+                    <p class="benefits-card__text">Вы будете удивлены, цена <br>от производителя</p>
                 </div>
             </section>
         </div>
@@ -372,9 +452,9 @@
             </div>
             <div class="footer-cnt">
                 <div class="footer-cnt__column is-row is-order-5">
-                    <div class="footer-cnt__item is-100 is-order-1 is-fz-18">+3 093 965 65 10</div>
-                    <div class="footer-cnt__item is-order-3 is-fz-18">Пн.- Пт. 9:00 -19:00; <br>Сб. 10.00 - 17.00</div>
-                    <div class="footer-cnt__item is-w-145 is-order-2 is-fz-18">Адрес: г. Одесса, <br>ул. Название-улицы №130</div>
+                    <div class="footer-cnt__item is-100 is-order-1 is-fz-18 is-fw-700">+3 093 965 65 10</div>
+                    <div class="footer-cnt__item is-order-3 is-fz-18 is-fw-700">Пн.- Пт. 9:00 -19:00; <br>Сб. 10.00 - 17.00</div>
+                    <div class="footer-cnt__item is-w-145 is-order-2 is-fz-18 is-fw-700">Адрес: г. Одесса, <br>ул. Название-улицы №130</div>
                 </div>
                 <nav class="footer-cnt__column is-order-1">
                     <a class="footer-cnt__item is-item-hover" href="#!">Каталог</a>
@@ -391,17 +471,17 @@
                     <a class="footer-cnt__item is-item-hover" href="#!">Акции</a>
                 </nav>
                 <div class="footer-cnt__column is-order-3">
-                    <h5 class="footer-cnt__item is-grey">Быстрая доставка</h5>
+                    <h5 class="footer-cnt__item is-grey is-fs-12">Быстрая доставка</h5>
                     <div class="footer-cnt__icons">
-                        <img class="footer-cnt__icon" src="./img/nova-poshta.svg" alt="">
-                        <img class="footer-cnt__icon" src="./img/poshta.svg" alt="">
-                        <img class="footer-cnt__icon" src="./img/ukr-poshta.svg" alt="">
-                        <img class="footer-cnt__icon" src="./img/delivery.svg" alt="">
+                        <img class="footer-cnt__icon is-pr" src="./img/nova-poshta.svg" alt="">
+                        <img class="footer-cnt__icon is-pr" src="./img/poshta.svg" alt="">
+                        <img class="footer-cnt__icon is-pr" src="./img/ukr-poshta.svg" alt="">
+                        <img class="footer-cnt__icon is-pr" src="./img/delivery.svg" alt="">
                     </div>
                 </div>
-                <div class="footer-cnt__column is-order-4">
-                    <h5 class="footer-cnt__item is-grey">Удобная оплата</h5>
-                    <div class="footer-cnt__icons">
+                <div class="footer-cnt__column is-end is-order-4">
+                    <h5 class="footer-cnt__item is-grey is-fs-12">Удобная оплата</h5>
+                    <div class="footer-cnt__icons is-column">
                         <img class="footer-cnt__icon" src="./img/master-card.svg" alt="">
                         <img class="footer-cnt__icon" src="./img/visa.svg" alt="">
                     </div>

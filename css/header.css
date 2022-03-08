@@ -3,11 +3,11 @@
   z-index: 99;
 }
 .header__icon {
-  transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 .header__icon:hover {
   transform: scale(1.2);
-  transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 .header__nav-list {
   display: flex;
@@ -68,11 +68,11 @@
 }
 .header-head__link {
   color: rgba(196, 196, 196, 0.5);
+  background-color: black;
 }
-.header-head__link:focus {
-  color: #8D8D8D;
+.header-head__link.active-lang {
+  color: #c4c4c4;
 }
-
 .header-cnt {
   display: flex;
   justify-content: space-between;

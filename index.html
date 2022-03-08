@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/icon-font.css">
     <link rel="stylesheet" href="./css/null-style.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/catalog.css">
@@ -28,8 +29,8 @@
                 <div class="header-head">
                     <span class="header-head__cooperation"><a class="header-head__cooperation-link" href="#!">Сотрудничетво</a></span>
                     <ul class="header-head__language">
-                        <li class="header-head__button"><a class="header-head__link" href="#!">Рус</a></li>
-                        <li class="header-head__button"><a class="header-head__link" href="#!">Укр</a></li>
+                        <li class="header-head__button"><button class="header-head__link active-lang">Рус</button></li>
+                        <li class="header-head__button"><button class="header-head__link">Укр</button></li>
                     </ul>
                 </div>
                 <div class="header-cnt">
@@ -125,13 +126,13 @@
                         <a class="products-head__link" href="#!"><img width="15" height="18" src="./img/home.svg" alt=""></a>
                         <a class="products-head__link" href="#!">Каталог</a>
                         <a class="products-head__link" href="#!">BMW</a>
-                        <a class="products-head__link" href="#!">525</a>
+                        <a class="products-head__link active-link" href="#!">525</a>
                     </div>
                     <div class="products-head__view">
                         <h2 class="products-head__title">Защита двигателя BMW 525</h2>
                         <div class="products-head__buttons">
-                            <button class="products-head__btn is-grid"></button>
-                            <button class="products-head__btn is-lines"></button>
+                            <button class="products-head__btn grid-button grid-active"></button>
+                            <button class="products-head__btn lines-button lines-passive"></button>
                         </div>
                     </div>
                 </div>
@@ -144,45 +145,46 @@
                                 <h3 class="aside-form__title">Подобрать защиту</h3>
                                 <img class="aside-form__drop-down" width="17" height="26" src="./img/drop-down.svg" alt="">
                             </div>
-                            <div class="aside-form__options">
-                                <select class="aside-form__option" name="model" id="model">
-                                    <option value="model" selected>BMW</option>
-                                    <option value="model">Audi</option>
-                                    <option value="model">Toyota</option>
-                                </select>
-                                <select class="aside-form__option" name="series" id="series">
-                                    <option value="" disabled selected hidden>Модель автомобиля</option>
-                                    <option value="series">518</option>
-                                    <option value="series">525</option>
-                                    <option value="series">535</option>
-                                </select>
-                                <select class="aside-form__option" name="year" id="year">
-                                    <option value="" disabled selected hidden>Год автомобиля</option>
-                                    <option value="year">1995</option>
-                                    <option value="year">1997</option>
-                                    <option value="year">1999</option>
-                                    <option value="year">2000</option>
-                                    <option value="year">2003</option>
-                                    <option value="year">2005</option>
-                                    <option value="year">2010</option>
-                                    <option value="year">2012</option>
-                                    <option value="year">2014</option>
-                                    <option value="year">2015</option>
-                                    <option value="year">2018</option>
-                                    <option value="year">2019</option>
-                                </select>
-                                <select class="aside-form__option" name="body" id="body">
-                                    <option value="" disabled selected hidden>Тип кузова и двигателя</option>
-                                    <option value="body">Hatchback</option>
-                                    <option value="body">Station wagon</option>
-                                    <option value="body">Sedan</option>
-                                </select>
+                            <div class="aside-options is-hidden" id="aside-options">
+                                <div class="aside-form__options">
+                                    <select class="aside-form__option" name="model" id="model">
+                                        <option value="model" selected>BMW</option>
+                                        <option value="model">Audi</option>
+                                        <option value="model">Toyota</option>
+                                    </select>
+                                    <select class="aside-form__option" name="series" id="series">
+                                        <option value="" disabled selected hidden>Модель автомобиля</option>
+                                        <option value="series">518</option>
+                                        <option value="series">525</option>
+                                        <option value="series">535</option>
+                                    </select>
+                                    <select class="aside-form__option" name="year" id="year">
+                                        <option value="" disabled selected hidden>Год автомобиля</option>
+                                        <option value="year">1995</option>
+                                        <option value="year">1997</option>
+                                        <option value="year">1999</option>
+                                        <option value="year">2000</option>
+                                        <option value="year">2003</option>
+                                        <option value="year">2005</option>
+                                        <option value="year">2010</option>
+                                        <option value="year">2012</option>
+                                        <option value="year">2014</option>
+                                        <option value="year">2015</option>
+                                        <option value="year">2018</option>
+                                        <option value="year">2019</option>
+                                    </select>
+                                    <select class="aside-form__option" name="body" id="body">
+                                        <option value="" disabled selected hidden>Тип кузова и двигателя</option>
+                                        <option value="body">Hatchback</option>
+                                        <option value="body">Station wagon</option>
+                                        <option value="body">Sedan</option>
+                                    </select>
+                                </div>
+                                <div class="aside-form__buttons">
+                                    <button class="aside-form__button is-white" type="reset">Сбросить</button>
+                                    <button class="aside-form__button is-green" type="submit">Применить</button>
+                                </div>
                             </div>
-                            <div class="aside-form__buttons">
-                                <button class="aside-form__button is-white" type="reset">Сбросить</button>
-                                <button class="aside-form__button is-green" type="submit">Применить</button>
-                            </div>
-                            
                         </form>
                     </aside>
                     <!-- ASIDE FORM - END -->
@@ -190,7 +192,7 @@
                     <div class="products-content">
                         <div class="products-cards">
                             <div class="products-options">
-                                <button class="products-options__item">1995</button>
+                                <button class="products-options__item active-tab">1995</button>
                                 <button class="products-options__item">1997</button>
                                 <button class="products-options__item">1999</button>
                                 <button class="products-options__item">2000</button>
@@ -202,142 +204,411 @@
                                 <button class="products-options__item">2015</button>
                                 <button class="products-options__item">2018</button>
                                 <button class="products-options__item">2019</button>
-                                <button class="products-options__item">1995</button>
-                                <button class="products-options__item">1997</button>
-                                <button class="products-options__item">1999</button>
-                                <button class="products-options__item">2000</button>
-                                <button class="products-options__item">2003</button>
                             </div>
-                            <div class="products-cards__list">
-
-                                <!-- PRODUCT CARD - START -->
-                                <article class="products-card">
-                                    <div class="products-card__head">
-                                        <span class="products-card__comment">0 отзыв(ов)</span>
-                                        <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
-                                    </div>
-                                    <div class="products-card__picture">
-                                        <img src="./img/product-img.jpg" alt="">
-                                    </div>
-                                    <div class="products-card__price-and-number">
-                                        <span class="products-card__price">2 750 грн</span>
-                                        <span class="products-card__number">102.9355.00</span>
-                                    </div>
-                                    <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
-                                    <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
-                                        Материал: серия <span>Premium</span>
-                                    </p>
-                                    <div class="products-card__buttons">
-                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
-                                        <button class="products-card__button is-black">Заказать</button>
-                                    </div>
-                                </article>
-                                <article class="products-card">
-                                    <div class="products-card__head">
-                                        <span class="products-card__comment">0 отзыв(ов)</span>
-                                        <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
-                                    </div>
-                                    <div class="products-card__picture">
-                                        <img src="./img/product-img.jpg" alt="">
-                                    </div>
-                                    <div class="products-card__price-and-number">
-                                        <span class="products-card__price">2 750 грн</span>
-                                        <span class="products-card__number">102.9355.00</span>
-                                    </div>
-                                    <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
-                                    <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
-                                        Материал: серия <span>Premium</span>
-                                    </p>
-                                    <div class="products-card__buttons">
-                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
-                                        <button class="products-card__button is-black">Заказать</button>
-                                    </div>
-                                </article>
-                                <article class="products-card">
-                                    <div class="products-card__head">
-                                        <span class="products-card__comment">0 отзыв(ов)</span>
-                                        <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
-                                    </div>
-                                    <div class="products-card__picture">
-                                        <img src="./img/product-img.jpg" alt="">
-                                    </div>
-                                    <div class="products-card__price-and-number">
-                                        <span class="products-card__price">2 750 грн</span>
-                                        <span class="products-card__number">102.9355.00</span>
-                                    </div>
-                                    <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
-                                    <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
-                                        Материал: серия <span>Premium</span>
-                                    </p>
-                                    <div class="products-card__buttons">
-                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
-                                        <button class="products-card__button is-black">Заказать</button>
-                                    </div>
-                                </article>
-                                <article class="products-card">
-                                    <div class="products-card__head">
-                                        <span class="products-card__comment">0 отзыв(ов)</span>
-                                        <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
-                                    </div>
-                                    <div class="products-card__picture">
-                                        <img src="./img/product-img.jpg" alt="">
-                                    </div>
-                                    <div class="products-card__price-and-number">
-                                        <span class="products-card__price">2 750 грн</span>
-                                        <span class="products-card__number">102.9355.00</span>
-                                    </div>
-                                    <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
-                                    <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
-                                        Материал: серия <span>Premium</span>
-                                    </p>
-                                    <div class="products-card__buttons">
-                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
-                                        <button class="products-card__button is-black">Заказать</button>
-                                    </div>
-                                </article>
-                                <article class="products-card">
-                                    <div class="products-card__head">
-                                        <span class="products-card__comment">0 отзыв(ов)</span>
-                                        <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
-                                    </div>
-                                    <div class="products-card__picture">
-                                        <img src="./img/product-img.jpg" alt="">
-                                    </div>
-                                    <div class="products-card__price-and-number">
-                                        <span class="products-card__price">2 750 грн</span>
-                                        <span class="products-card__number">102.9355.00</span>
-                                    </div>
-                                    <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
-                                    <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
-                                        Материал: серия <span>Premium</span>
-                                    </p>
-                                    <div class="products-card__buttons">
-                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
-                                        <button class="products-card__button is-black">Заказать</button>
-                                    </div>
-                                </article>
-                                <article class="products-card">
-                                    <div class="products-card__head">
-                                        <span class="products-card__comment">0 отзыв(ов)</span>
-                                        <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
-                                    </div>
-                                    <div class="products-card__picture">
-                                        <img src="./img/product-img.jpg" alt="">
-                                    </div>
-                                    <div class="products-card__price-and-number">
-                                        <span class="products-card__price">2 750 грн</span>
-                                        <span class="products-card__number">102.9355.00</span>
-                                    </div>
-                                    <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
-                                    <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
-                                        Материал: серия <span>Premium</span>
-                                    </p>
-                                    <div class="products-card__buttons">
-                                        <button class="products-card__button is-buttom">Купить в 1 клик</button>
-                                        <button class="products-card__button is-black">Заказать</button>
-                                    </div>
-                                </article>
-                                <!-- PRODUCT CARD - END -->
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="1995">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="1997">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="1999">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="2000">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="2003">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="2005">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="2010">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="2012">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="2014">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="2015">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="2018">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="products-cards__content">
+                                <div class="products-cards__list" id="2019">
+                                    <article class="products-card">
+                                        <div class="products-card__head">
+                                            <span class="products-card__comment">0 отзыв(ов)</span>
+                                            <img class="products-card__star" width="46" src="./img/icons-star.svg" alt="">
+                                        </div>
+                                        <div class="products-card__picture">
+                                            <img src="./img/product-img.jpg" alt="">
+                                        </div>
+                                        <div class="products-card__price-and-number">
+                                            <span class="products-card__price">2 750 грн</span>
+                                            <span class="products-card__number">102.9355.00</span>
+                                        </div>
+                                        <p class="products-card__description">Защита двигателя,КПП и радиатора Chevrolet Aveo Т-200 2002-2008, Premium (Оцинкованная сталь + покрытие)</p>
+                                        <p class="products-card__details">Что закрывает: двигатель, КПП, радиатор <br>
+                                            Материал: серия <span>Premium</span>
+                                        </p>
+                                        <div class="products-card__buttons">
+                                            <button class="products-card__button is-buttom">Купить в 1 клик</button>
+                                            <button class="products-card__button is-black">Заказать</button>
+                                        </div>
+                                    </article>
+                                </div>
                             </div>
                         </div>
                         <div class="show-more">

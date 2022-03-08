@@ -14,11 +14,11 @@
     
 
     &__icon {
-        transition: 0.3s ease;
+        transition: 0.3s ease-in-out;
     }
     &__icon:hover {
         transform: scale(1.2);
-        transition: 0.3s ease;
+        transition: 0.3s ease-in-out;
     }
 
     &__nav-menu {
@@ -98,12 +98,16 @@
 
     &__link {
         color: rgba(196, 196, 196, 0.5);
-        
+        background-color: black;
+        &.active-lang {
+            color: rgb(196, 196, 196);
+        }
     }
     &__link:focus {
-       color: #8D8D8D; 
+       
        
     }
+    
 }
 .header-cnt {
     display: flex;

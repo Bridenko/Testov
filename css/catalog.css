@@ -123,6 +123,9 @@
   text-transform: uppercase;
   color: white;
 }
+.aside-form__drop-down {
+  cursor: pointer;
+}
 .aside-form__options {
   display: flex;
   flex-direction: column;

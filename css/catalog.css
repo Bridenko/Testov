@@ -115,6 +115,7 @@
   justify-content: space-between;
   align-items: center;
   background: #111111;
+  cursor: pointer;
 }
 .aside-form__title {
   font-family: "Open Sans", sans-serif;
@@ -123,36 +124,16 @@
   text-transform: uppercase;
   color: white;
 }
-.aside-form__drop-down {
-  cursor: pointer;
-}
 .aside-form__options {
   display: flex;
   flex-direction: column;
-  padding: 0px 25px;
+  padding: 45px 25px;
 }
-.aside-form__option {
-  padding: 26px 18px;
+.aside-form__select {
   margin-bottom: 15px;
-  font-size: 18px;
-  border: 2px solid #464646;
-  background: #282828;
-  color: #BCBCBC;
-  transition: 0.3s;
 }
-.aside-form__option:hover {
-  border: 2px solid #8D8D8D;
-  transition: 0.3s;
-}
-.aside-form__option:focus {
-  border: 2px solid #00D093;
-  transition: 0.3s;
-}
-.aside-form__option:nth-child(1) {
-  margin-top: 45px;
-}
-.aside-form__option:last-child {
-  margin-bottom: 45px;
+.aside-form__select:last-child {
+  margin-bottom: 0px;
 }
 .aside-form__buttons {
   display: flex;
@@ -160,9 +141,11 @@
 }
 .aside-form__button {
   position: relative;
+  display: flex;
+  justify-content: center;
   padding: 35px 0px;
-  max-width: 176px;
-  width: 100%;
+  margin: 0 auto;
+  width: 50%;
   text-align: center;
   font-size: 18px;
   font-weight: 700;
@@ -174,32 +157,103 @@
 .aside-form__button.is-green {
   position: relative;
   text-align: center;
-  padding-right: 25px;
   color: #111111;
   background: #00D093;
-}
-.aside-form__button.is-green::after {
-  content: " ";
-  position: absolute;
-  top: 36px;
-  right: 20px;
-  width: 16px;
-  height: 22px;
-  background-image: url(../img/aside-buttom.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: 0.3s ease;
-}
-.aside-form__button.is-green:hover:after {
-  content: " ";
-  right: 20px;
-  transform: scale(1.3);
-  transition: 0.3s ease;
 }
 .aside-form__button.is-white:hover {
   color: #BCBCBC;
   font-weight: 700;
   transition: 0.3s ease;
+}
+.aside-form__button img {
+  padding-left: 10px;
+}
+
+.select {
+  position: relative;
+  color: #BCBCBC;
+}
+.select__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 25px 16px;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  border: 2px solid #BCBCBC;
+  text-align: center;
+  background: #282828;
+  cursor: pointer;
+}
+.select__head.is-open {
+  border: 2px solid #00D093;
+  border-bottom: none;
+}
+.select__button {
+  cursor: pointer;
+  align-items: center;
+  transition: all 0.3s linear;
+}
+.select__button.rotate-button {
+  transform: rotate(-180deg);
+}
+.select__current {
+  font-size: 18px;
+}
+.select__body {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  left: 0px;
+  padding: 0px 14px;
+  height: 192px;
+  overflow: scroll;
+  background: #282828;
+  border: 2px solid #BCBCBC;
+  border-top: none;
+  z-index: 90;
+}
+.select__body.is-open {
+  border: 2px solid #00D093;
+  border-top: none;
+}
+.select__item {
+  color: white;
+  margin: 24px 0px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: ease-in 0.2s;
+}
+.select__item:hover {
+  color: #00D093;
+  transition: ease-in 0.2s;
+}
+.select__item:active {
+  color: #00D093;
+  transition: ease-in 0.2s;
+}
+.select__item:first-child {
+  margin-top: 0px;
+}
+
+.is-open {
+  z-index: 99;
+}
+.select__body::-webkit-scrollbar-thumb {
+  background-color: #00D093;
+  /* color of the scroll thumb */
+}
+
+.select__body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.select__body::-webkit-scrollbar-track {
+  background: transparent;
+  /* color of the tracking area */
 }
 
 .aside-options {
@@ -492,10 +546,6 @@
     gap: 2px;
   }
 
-  .viewed {
-    display: none;
-  }
-
   .show-more {
     text-align: center;
     max-width: 372px;
@@ -561,10 +611,6 @@
 
   .aside-form {
     width: 100%;
-  }
-
-  .aside-form__buttons {
-    padding: 0px 25px;
   }
 
   .products-catalog {
@@ -713,10 +759,6 @@
 
   .aside-form__button.is-green {
     padding-right: 0px;
-  }
-
-  .aside-form__buttons {
-    padding: 0px;
   }
 }
 @media (max-width: 360px) {

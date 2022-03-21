@@ -36,46 +36,38 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     showAside();
 
-    // show select
-    // const select = document.querySelectorAll('.select');
-    // const selectDrop = document.querySelector('.select__button');
-    const selectBody = document.querySelectorAll('.select__body');
+    // Select
     const selectHead = document.querySelectorAll('.select__head');
-    // const selectCurrent = document.querySelector('.select__current');
     const selectItem = document.querySelectorAll('.select__item ');
 
-    
-    [...selectHead].forEach( head => {
-        head.addEventListener('click', () => {
-            const select = head.closest('.select');
-            const selectBody = select.querySelector('.select__body');
-            if (selectBody.classList.contains('hide')) {
-                openSelect(select, selectBody, head);
-            } else {
-                closeSelect(select, selectBody, head);
-            }
+    document.addEventListener('mouseup', (event) => {
+        const select = document.querySelector('.select.is-open');
+        const asideSelect = document.querySelector('select');
+        if (event.target != asideSelect && select) {
+            closeSelect(select);
+        }
+        [...selectHead].forEach( head => {
+            head.addEventListener('click', () => {
+                const select = head.closest('.select');
+                if (select.classList.contains('is-open')) {
+                    closeSelect(select);
+                } else {
+                    openSelect(select);
+                }
+            });
         });
     });
     
-    function openSelect(select, selectBody, head) {
+    function openSelect(select) {
+        chekOpenedSelect();
         select.classList.add('is-open');
-        selectBody.classList.remove('hide');
-        selectBody.classList.add('show');
-        selectBody.style.border = "2px solid #00D093";
-        selectBody.style.borderTop = "none";
-        head.style.border = "2px solid #00D093";
-        head.style.borderBottom = "none";
-        select.querySelector('.select__current').style.marginBottom = '2px';
-        select.querySelector('.select__button').classList.add('rotate-button');
     }
     function closeSelect(select) {
         select.classList.remove('is-open');
-        const body = select.querySelector('.select__body');
-        body.classList.add('hide');
-        body.classList.remove('show');
-        select.querySelector('.select__head').style.border = "2px solid #BCBCBC";
-        select.querySelector('.select__current').style.marginBottom = '0px';
-        select.querySelector('.select__button').classList.remove('rotate-button');
+    }
+    function chekOpenedSelect() {
+        const select = document.querySelector('.select.is-open');
+        if (select) closeSelect(select);
     }
     
     selectItem.forEach(item => {
@@ -166,6 +158,24 @@ window.addEventListener('DOMContentLoaded', () => {
     }());
 
     // GRID to LINES - end
+
+    // SHOW MORE BUTTON - START
+
+    const showMore = document.querySelector('.show-more');
+    let currentItem = 6;
+    showMore.addEventListener('click', () => {
+        let cardsItem = [...document.querySelectorAll('.products-cards__content .products-cards__list .products-card')];
+        for (let i = currentItem; i < currentItem + 6; i++) {
+            cardsItem[i].style.display = 'inline-block';
+        }
+        currentItem += 6;
+
+        if (currentItem >= cardsItem.length) {
+            showMore.style.display = 'none';
+        }
+    });
+
+    // SHOW MORE BUTTON - END
 
     // Slick slider - start 
 

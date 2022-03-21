@@ -1,0 +1,123 @@
+// .select.is-open .select__body {
+
+// }
+.select {
+    position: relative;
+    color: #BCBCBC;
+    & + * {
+        margin-top: 15px;
+    }
+    &.is-open {
+        .select__head {
+            border: 2px solid #00D093;
+            border-bottom: none;
+        }
+        .select__body {
+            display: block;
+            border: 2px solid #00D093;
+            border-top: none;
+        }
+        .select__current {
+            margin-bottom: 2px;
+        }
+        .select__button {
+            transform: rotate(-180deg);
+        }
+    }
+    &__head {
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 25px 16px;
+        font-size: 18px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        border: 2px solid #BCBCBC;
+        text-align: center;
+        background: #282828;
+        cursor: pointer;
+    }
+
+    &__button {
+        cursor: pointer;
+        align-items: center;
+        transition: all 0.45s linear;
+    }
+
+    &__current {
+        font-size: 18px;
+    }
+
+    &__body {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0px;
+        left: 0px;
+        padding: 0px 14px;
+        height: 192px;
+        overflow: scroll;
+        background: #282828;
+        border: 2px solid #BCBCBC;
+        border-top: none;
+        z-index: 90;
+        &.is-open {
+            border: 2px solid #00D093;
+            border-top: none;
+        }
+    }
+
+    &__body::-webkit-scrollbar-thumb {}
+
+    &__item {
+        color: white;
+        margin: 24px 0px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: ease-in 0.2s;
+    }
+
+    &__item:hover {
+        color: #00D093;
+        transition: ease-in 0.2s;
+    }
+
+    &__item:active {
+        color: #00D093;
+        transition: ease-in 0.2s;
+    }
+
+    &__item:first-child {
+        margin-top: 0px;
+    }
+
+}
+
+.is-open {
+    .select__body {
+        
+    }
+    .select__head {
+        
+    }
+    z-index: 99;
+}
+
+.select__body::-webkit-scrollbar-thumb {
+    background-color: #00D093;
+    /* color of the scroll thumb */
+
+
+}
+
+.select__body::-webkit-scrollbar {
+    width: 5px;
+
+}
+
+.select__body::-webkit-scrollbar-track {
+    background: transparent;
+    /* color of the tracking area */
+}
